@@ -3,29 +3,36 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. 这一页是目录树
+
 [野火]sphinx文档规范与模版
 ======================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 为什么使用sphinx写文档
+
    foreword
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 安装sphinx开发环境
 
+   install-sphinx-env/sphinx
+   install-sphinx-env/vscode
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: reST语法
 
+   rest-syntax/base-syntax
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 使用markdown
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 发布文档到readthedoc

@@ -1,5 +1,7 @@
 .. vim: syntax=rst
 
+.. _about_embedfire:
+
 关于野火
 ==============
 
