@@ -12,21 +12,39 @@
    :maxdepth: 1
    :caption: 为什么使用sphinx写文档
 
+   about_us
+   TODO
    foreword
 
 .. toctree::
-   :maxdepth: 1
-   :caption: 安装sphinx开发环境
+   :maxdepth: 2
+   :caption: 使用sphinx和vscode编写文档
+   :titlesonly:
+   :numbered:
 
    install-sphinx-env/sphinx
    install-sphinx-env/vscode
 
+.. glob可以自动搜索符合的目标，但不适合顺序编号
+.. 对顺序无要求的目录可以使用这种方式
+.. .. toctree::
+..    :maxdepth: 1
+..    :caption: 安装sphinx开发环境
+..    :titlesonly:
+..    :numbered:
+..    :glob:
+..    install-sphinx-env/*
+
+
+.. 这是二级目录树的使用范例
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: reST语法
+   :titlesonly:
 
-   rest-syntax/base-syntax
+   rest-syntax/index
+
 
 .. toctree::
    :maxdepth: 1

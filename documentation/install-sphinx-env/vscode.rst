@@ -3,8 +3,11 @@
 安装vscode及其插件
 ==========================================
 
-使用vscode编写sphinx文档非常方便，可以即使预览和自动编译。
+使用vscode编写sphinx文档非常方便，可以即时预览和自动编译。
 
+rst vscode插件说明页：https://docs.restructuredtext.net/index.html
+
+另外，vscode默认支持markdown单个文件的预览。
 
 需要安装的vscode插件：
 

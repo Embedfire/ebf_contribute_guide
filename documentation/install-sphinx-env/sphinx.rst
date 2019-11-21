@@ -2,7 +2,7 @@
 
 .. highlight:: sh
 
-sphinx使用
+sphinx的安装与使用
 ============================
 
 安装sphinx
