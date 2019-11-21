@@ -15,6 +15,7 @@
    about_us
    TODO
    foreword
+   contribute/rule
 
 .. toctree::
    :maxdepth: 2
@@ -35,6 +36,15 @@
 ..    :glob:
 ..    install-sphinx-env/*
 
+.. 二级目录表示法
+.. .. toctree::
+..    :maxdepth: 2
+..    :caption: reST语法
+..    :titlesonly:
+..
+..    rest-syntax/index
+
+
 
 .. 这是二级目录树的使用范例
 
@@ -43,13 +53,24 @@
    :caption: reST语法
    :titlesonly:
 
-   rest-syntax/index
-
+   rest-syntax/base-syntax
+   rest-syntax/cross-reference
+   rest-syntax/code-highlight
+   rest-syntax/pic-video
+   rest-syntax/admonition
+   rest-syntax/directive-role
 
 .. toctree::
    :maxdepth: 1
    :caption: 使用markdown
 
+   markdown-syntax/markdown-sphinx
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 文档格式转换
+
+   format-convert/pandoc
 
 .. toctree::
    :maxdepth: 1

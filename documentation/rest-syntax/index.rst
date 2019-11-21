@@ -19,3 +19,4 @@ rst常用语法
    cross-reference
    code-highlight
    pic-video
+   admonition
