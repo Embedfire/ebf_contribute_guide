@@ -11,7 +11,7 @@
 
 显示图片直接使用image指令，无特殊情况的话我们书籍图片要求使用居中方式显示：
 
-.. image:: media/logo.png
+.. image:: ../media/rest-syntax/pic-video/logo.png
    :align: center
 
 
@@ -22,12 +22,12 @@
 
 |logo|
 
-.. |logo| image:: media/logo.png
+.. |logo| image:: ../media/rest-syntax/pic-video/logo.png
 
 图片还可以使用 width、heigh、scale等参数，但不推荐使用，设置过width、height参数的图片，
 在页面可以点击查看原图。
 
-.. image:: media/logo.png
+.. image:: ../media/rest-syntax/pic-video/logo.png
    :align: center
    :width: 5.63529in
    :height: 0.97222in

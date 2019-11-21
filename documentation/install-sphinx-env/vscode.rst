@@ -18,18 +18,18 @@ rst vscode插件说明页：https://docs.restructuredtext.net/index.html
 
 安装reStructuredText插件后，打开rst文件，点击预览按钮。
 
-.. image:: media/preview.png
+.. image:: ../media/install-sphinx-env/vscode/preview.png
    :align: center
 
 
 会提示使用sphinx还是doctuil工具，我们选择使用sphinx。
 
-.. image:: media/vscode-sphinx.png
+.. image:: ../media/install-sphinx-env/vscode/vscode-sphinx.png
    :align: center
 
 若配置正确，稍等一会即可在右侧看到预览效果。
 
-.. image:: media/preview_result.png
+.. image:: ../media/install-sphinx-env/vscode/preview_result.png
    :align: center
 
 
