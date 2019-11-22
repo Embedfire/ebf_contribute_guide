@@ -12,10 +12,10 @@
    :maxdepth: 1
    :caption: 为什么使用sphinx写文档
 
+   README
    about_us
+   contribute/quick-contribute
    TODO
-   foreword
-   contribute/rule
 
 .. toctree::
    :maxdepth: 2
@@ -52,6 +52,7 @@
    :maxdepth: 2
    :caption: reST语法
    :titlesonly:
+   :numbered:
 
    rest-syntax/base-syntax
    rest-syntax/cross-reference
@@ -59,6 +60,7 @@
    rest-syntax/pic-video
    rest-syntax/admonition
    rest-syntax/directive-role
+   rest-syntax/rule
 
 .. toctree::
    :maxdepth: 1
@@ -71,6 +73,18 @@
    :caption: 文档格式转换
 
    format-convert/pandoc
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 常见问题
+
+   faq/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 版权
+
+   LICENSE
 
 .. toctree::
    :maxdepth: 1

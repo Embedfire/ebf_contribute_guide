@@ -10,6 +10,7 @@
   ├── README                    说明文档或软链接至documentation中的说明，方便github阅读
   ├── base_code                 配套代码
   └── documentation             配套文档
+      ├── faq                   存储常见问题的文档
       ├── about_us.rst          关于我们
       ├── _build                文档编译输出目录
       ├── conf.py               sphinx配置文件
@@ -24,7 +25,7 @@
       ├── _templates
       ├── TODO.rst              待完成的内容，发布的任务列表
 
-
+.. highlight:: rst
 
 图片
 ---------------------------------
@@ -52,6 +53,18 @@ rst格式检查
 make html时，编译会有提示输出，尽量让它不输出的warning。
 
 
+代码引用
+---------------------------------
 
+超过3行的代码要加上行号、并用caption名指明代码片段的名，对于引用的代码文件，使用caption指明引用的路径名。
+
+如以下语法：
+
+::
+
+   .. literalinclude:: ../../base_code/hello.c
+      :caption: ../../base_code/hello.c
+      :language: c
+      :linenos:
 
 

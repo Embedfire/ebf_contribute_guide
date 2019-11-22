@@ -39,7 +39,7 @@
 
 效果：
 
-|logo|,使用"|宏名|"的形式替换文字。
+|logo|,使用"|"宏名"|"的形式替换文字。
 
 .. |logo| image:: ../media/rest-syntax/pic-video/logo.png
 
@@ -70,7 +70,7 @@
 
 在vscode可能无法预览，直接在浏览器中看即可。
 
-.. note:: 
+.. note::
 
     TODO：目前还不知道如何放大，以及点击后到具体的视频网站播放。
 

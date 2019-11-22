@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = '[野火]sphinx文档规范与模版'
-copyright = '2019, embedfire-野火'
-author = 'embedfire-野火'
+copyright = '2019, embedfire-野火 www.embedfir.com'
+author = 'embedfire-野火 www.embedfire.com'
 
 
 # -- General configuration ---------------------------------------------------
