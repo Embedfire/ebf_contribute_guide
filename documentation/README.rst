@@ -7,6 +7,8 @@
 
 本项目的gitee 地址：https://gitee.com/wildfireteam/ebf_contribute_guide
 
+点击右侧链接可在线阅读本项目文档：《 `[野火]sphinx文档规范与模版 <http://contribute.doc.embedfire.com>`_ 》
+
 
 本文档是关于如何使用sphinx编写文档的说明。
 也可以把本文档作为模版创建其它sphinx的文档。
