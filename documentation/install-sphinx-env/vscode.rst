@@ -9,6 +9,9 @@ rst vscode插件说明页：https://docs.restructuredtext.net/index.html
 
 另外，vscode默认支持markdown单个文件的预览。
 
+reStructuredText
+-------------------------------
+
 需要安装的vscode插件：
 
 - python
@@ -33,3 +36,13 @@ rst vscode插件说明页：https://docs.restructuredtext.net/index.html
    :align: center
 
 
+
+Table Formater
+----------------------------
+使用Table Formater可以方便格式化表格，支持markdown和rst
+https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatter
+
+插件名：Table Formatter
+
+
+安装后通过Ctrl-Shift-P调用 Table: Format Current 或 Table: Format All

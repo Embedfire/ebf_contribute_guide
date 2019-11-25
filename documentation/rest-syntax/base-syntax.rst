@@ -123,4 +123,36 @@ a. hhhhhhhh
 #. hhhhhhhh
 
 
+表格
+-----------------------
+
+表格使用 == 号制作
+
+语法示例：
+
+::
+
+    =====  =====  =======
+    A      B      A and B
+    =====  =====  =======
+    False  False  False
+    True   False  False
+    False  True   False
+    True   True   True
+    =====  =====  =======
+
+效果：
+
+=====  =====  =======
+A      B      A and B
+=====  =====  =======
+False  False  False
+True   False  False
+False  True   False
+True   True   True
+=====  =====  =======
+
+在vscode可安装插件方便格式化表格：https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatter
+
+安装后通过Ctrl-Shift-P调用 Table: Format Current 或 Table: Format All
 
