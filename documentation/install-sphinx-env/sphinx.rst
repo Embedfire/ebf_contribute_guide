@@ -92,8 +92,11 @@ sphinx默认不支持markdown语法，要支持的话请参考本模版的conf.p
 到文档源码所在的makefile目录：
 
 ::
-
     #在文档的makefile目录下执行
+
+    #Windows指令
+    make.bat  html
+    #Ubuntu指令
     make html
 
 在设定的build或_build的html目录下会生成静态的html文件。可直接使用这些静态的html文件制作网站。
@@ -127,6 +130,15 @@ vscode插件预览有时不够完整，可以在本地开启一个python服务�
 ::
 
     #清除编译输出
+
+    #Windows指令
+    make.bat  clean
+    #Ubuntu指令
     make clean
+
     #重新编译
+
+    #Windows指令
+    make.bat  html
+    #Ubuntu指令
     make html

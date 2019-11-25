@@ -4,23 +4,30 @@
 图片与视频
 ==========================================
 
+添加图片的sphinx说明：http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+添加图片的rst官方说明：
+
 
 图片
 ----------------------
 图片原文件统一存储在引用文档所在的同级目录的 **media** 文件夹下。
 
-显示图片直接使用image指令，无特殊情况的话我们书籍图片要求使用居中方式显示：
+显示图片直接使用image指令，无特殊情况的话我们书籍图片要求使用居中方式显示，
+还需要添加“alt”选项指定图片的描述（类似doc中的题注），以便图片加载失败时显示文字
 
 语法：
 ::
 
     .. image:: ../media/rest-syntax/pic-video/logo.png
     :align: center
+    :alt: 野火logo
 
 效果：
 
 .. image:: ../media/rest-syntax/pic-video/logo.png
    :align: center
+   :alt: 野火logo
+
 
 
 以下的图片显示方式是word自动转换的结果，使用这种方式无法以居中形式显示图片，所以我们要修改。
