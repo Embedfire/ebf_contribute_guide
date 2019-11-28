@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. 基础语法 &mdash; [野火]sphinx文档规范与模版  文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="2. 超链接与文件引用" href="cross-reference.html" />
+    <link rel="prev" title="2. 使用vscode编写rst文件" href="../install-sphinx-env/vscode.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> [野火]sphinx文档规范与模版
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">为什么使用sphinx写文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">关于本项目</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_us.html">关于野火</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/quick-contribute.html">快速参与本项目（提交bug或文档修改）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TODO.html">TODO和悬赏任务</a></li>
+</ul>
+<p class="caption"><span class="caption-text">使用sphinx和vscode编写文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install-sphinx-env/sphinx.html">1. sphinx的安装与使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-sphinx-env/vscode.html">2. 使用vscode编写rst文件</a></li>
+</ul>
+<p class="caption"><span class="caption-text">reST语法</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. 基础语法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cross-reference.html">2. 超链接与文件引用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-highlight.html">3. 代码高亮</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pic-video.html">4. 图片与视频</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math.html">5. 数学符号和公式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admonition.html">6. 特殊提示</a></li>
+<li class="toctree-l1"><a class="reference internal" href="directive-role.html">7. rst的指令和角色（directive and role）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rule.html">8. 野火sphinx文档规范</a></li>
+</ul>
+<p class="caption"><span class="caption-text">使用markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown-syntax/markdown-sphinx.html">使sphinx支持markdown</a></li>
+</ul>
+<p class="caption"><span class="caption-text">文档格式转换</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../format-convert/pandoc.html">使用pandoc进行文档转换</a></li>
+</ul>
+<p class="caption"><span class="caption-text">常见问题</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">常见问题</a></li>
+</ul>
+<p class="caption"><span class="caption-text">版权</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../LICENSE.html">版权说明</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">[野火]sphinx文档规范与模版</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>1. 基础语法</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rest-syntax/base-syntax.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>1. 基础语法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>rst的基础语法和markdown差不多，</p>
+<p>可以使用这个在线的rst编辑器了解相关语法：<a class="reference external" href="http://rst.ninjs.org/">rst在线编辑器</a></p>
+<ul class="simple">
+<li><p>sphinx语法官网：<a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html</a></p></li>
+<li><p>restruct语法官网：<a class="reference external" href="http://docutils.sourceforge.net/rst.html">http://docutils.sourceforge.net/rst.html</a></p></li>
+</ul>
+<p>下面是常用语法：</p>
+<p>语法：</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">一级标题</span>
+<span class="gh">==============================</span>
+
+<span class="gh">二级标题</span>
+<span class="gh">------------------</span>
+
+<span class="gh">三级标题</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^</span>
+
+<span class="gh">四级标题</span>
+<span class="gh">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+
+<span class="gh">五级标题</span>
+<span class="gh">*****************</span>
+
+<span class="gs">**强调**</span>
+
+<span class="ge">*斜体*</span>
+
+<span class="s">``monospace,会变色，具体作用不清楚``</span>
+
+<span class="gh">无序列表</span>
+<span class="gh">---------------------------</span>
+<span class="m">-</span> hhhhhhhh
+<span class="m">-</span> hhhhhhhh
+<span class="m">-</span> hhhhhhhh
+<span class="m">-</span> hhhhhhhh
+<span class="m">-</span> hhhhhhhh
+<span class="m">-</span> hhhhhhhh
+
+<span class="gh">有序列表</span>
+<span class="gh">------------------------</span>
+支持数字、大小写字母和罗马数字
+
+<span class="m">1.</span> hhhhhhhh
+<span class="m">#.</span> hhhhhhhh
+<span class="m">#.</span> hhhhhhhh
+<span class="m">#.</span> hhhhhhhh
+<span class="m">#.</span> hhhhhhhh
+<span class="m">#.</span> hhhhhhhh
+
+a. hhhhhhhh
+<span class="m">#.</span> hhhhhhhh
+<span class="m">#.</span> hhhhhhhh
+<span class="m">#.</span> hhhhhhhh
+<span class="m">#.</span> hhhhhhhh
+<span class="m">#.</span> hhhhhhhh
+</pre></div>
+</div>
+<p>效果：</p>
+<div class="section" id="id2">
+<h2>1.1. 一级标题<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id3">
+<h3>1.1.1. 二级标题<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id4">
+<h4>1.1.1.1. 三级标题<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id5">
+<h5>1.1.1.1.1. 四级标题<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h5>
+<div class="section" id="id6">
+<h6>1.1.1.1.1.1. 五级标题<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h6>
+<p><strong>强调</strong></p>
+<p><em>斜体</em></p>
+<p><code class="docutils literal notranslate"><span class="pre">monospace,会变色，具体作用不清楚</span></code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>1.1.2. 无序列表<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>1.1.3. 有序列表<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>支持数字、大小写字母和罗马数字</p>
+<ol class="arabic simple">
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+</ol>
+<ol class="loweralpha simple">
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+</ol>
+</div>
+<div class="section" id="id9">
+<h3>1.1.4. 表格<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>表格使用 == 号制作</p>
+<p>语法示例：</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>=====  =====  =======
+A      B      A and B
+=====  =====  =======
+False  False  False
+True   False  False
+False  True   False
+True   True   True
+=====  =====  =======
+</pre></div>
+</div>
+<p>效果：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 29%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A and B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+<p>在vscode可安装插件方便格式化表格：<a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatter">https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatter</a></p>
+<p>安装后通过Ctrl-Shift-P调用 Table: Format Current 或 Table: Format All</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cross-reference.html" class="btn btn-neutral float-right" title="2. 超链接与文件引用" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../install-sphinx-env/vscode.html" class="btn btn-neutral float-left" title="2. 使用vscode编写rst文件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, embedfire-野火 www.embedfire.com
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>使用pandoc进行文档转换 &mdash; [野火]sphinx文档规范与模版  文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="常见问题" href="../faq/index.html" />
+    <link rel="prev" title="使sphinx支持markdown" href="../markdown-syntax/markdown-sphinx.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> [野火]sphinx文档规范与模版
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">为什么使用sphinx写文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">关于本项目</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_us.html">关于野火</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/quick-contribute.html">快速参与本项目（提交bug或文档修改）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TODO.html">TODO和悬赏任务</a></li>
+</ul>
+<p class="caption"><span class="caption-text">使用sphinx和vscode编写文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install-sphinx-env/sphinx.html">1. sphinx的安装与使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-sphinx-env/vscode.html">2. 使用vscode编写rst文件</a></li>
+</ul>
+<p class="caption"><span class="caption-text">reST语法</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rest-syntax/base-syntax.html">1. 基础语法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest-syntax/cross-reference.html">2. 超链接与文件引用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest-syntax/code-highlight.html">3. 代码高亮</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest-syntax/pic-video.html">4. 图片与视频</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest-syntax/math.html">5. 数学符号和公式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest-syntax/admonition.html">6. 特殊提示</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest-syntax/directive-role.html">7. rst的指令和角色（directive and role）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest-syntax/rule.html">8. 野火sphinx文档规范</a></li>
+</ul>
+<p class="caption"><span class="caption-text">使用markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown-syntax/markdown-sphinx.html">使sphinx支持markdown</a></li>
+</ul>
+<p class="caption"><span class="caption-text">文档格式转换</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">使用pandoc进行文档转换</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docxrst">docx转rst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pandoc-rstdocx">pandoc  rst转docx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pandoc-docxrst">pandoc docx转rst</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">常见问题</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">常见问题</a></li>
+</ul>
+<p class="caption"><span class="caption-text">版权</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../LICENSE.html">版权说明</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">[野火]sphinx文档规范与模版</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>使用pandoc进行文档转换</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/format-convert/pandoc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pandoc">
+<h1>使用pandoc进行文档转换<a class="headerlink" href="#pandoc" title="永久链接至标题">¶</a></h1>
+<p>使用pandoc可以方便地对文档的格式进行相互转换。</p>
+<div class="section" id="id1">
+<h2>安装<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>pandoc安装说明：<a class="reference external" href="https://github.com/jgm/pandoc/blob/master/INSTALL.md">https://github.com/jgm/pandoc/blob/master/INSTALL.md</a></p>
+<p>pandoc用户手册：<a class="reference external" href="https://pandoc.org/MANUAL.html">https://pandoc.org/MANUAL.html</a></p>
+<p>根据系统按它的说明下载对应的安装包即可，ubuntu下不要直接用apt安装，apt安装的版本太旧。</p>
+<p>在ubuntu下可以使用如下命令查看pandoc的说明：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>man pandoc
+</pre></div>
+</div>
+</div>
+<div class="section" id="docxrst">
+<h2>docx转rst<a class="headerlink" href="#docxrst" title="永久链接至标题">¶</a></h2>
+<p>使用python安装rstdoc扩展包，方便转换：<a class="reference external" href="https://pypi.org/project/rstdoc/">https://pypi.org/project/rstdoc/</a></p>
+<p>docx转rst操作步骤：</p>
+<ul class="simple">
+<li><p>先把docx文档按章节分开，一个章节一个docx文档，不然整个文档转换可能太大，
+导致错误，而且整个文档转换图片或内容不方便处理。</p></li>
+<li><p>使用rstfromdocx命令一个个文档转换成rst</p></li>
+</ul>
+<p>使用如下指令转换</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1">#doc1为要转换的文档</span>
+rstfromdocx -lurg doc1.docx
+</pre></div>
+</div>
+<p>命令执行后会生成与文档名相同的目录，目录下是sphinx形式的rest文档，
+把rest文档复制至新的书籍目录并把后缀改为rst，media下的图片也放到目标书籍的同级目录即可。</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>在Windows转换后，生成的文件目录引用使用的路径是“”，而sphinx路径只支持“/”，
+所以图片之类的引用路径要注意修改。</p>
+</div>
+</div>
+<div class="section" id="pandoc-rstdocx">
+<h2>pandoc  rst转docx<a class="headerlink" href="#pandoc-rstdocx" title="永久链接至标题">¶</a></h2>
+<p>rstdocx插件据说可以更完美地把rst转成docx，但还不清楚rstdocx插件如何把rst转成docx，但用pandoc可满足基本要求。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pandoc rstfile.rst  -f   rst  -t docx  -o targetdocfile.docx  --data-dir<span class="o">=</span>sourcedir  --reference-doc<span class="o">=</span>module.docx
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>其中rstfile.rst是源文件，-f 指源格式，-f 指目标格式</p></li>
+<li><p>-o指定的是输出文件</p></li>
+<li><p>–data-dir=指定的是依赖目录</p></li>
+<li><p>–reference-doc=是docx模版文件，使用模版文件转换可以把标题之类的格式搞得更规范</p></li>
+</ul>
+<p>reference-doc模版及说明：<a class="reference external" href="https://pandoc.org/MANUAL.html#option--reference-doc">https://pandoc.org/MANUAL.html#option–reference-doc</a></p>
+</div>
+<div class="section" id="pandoc-docxrst">
+<h2>pandoc docx转rst<a class="headerlink" href="#pandoc-docxrst" title="永久链接至标题">¶</a></h2>
+<p>与rst转docx类似，输出的图片目录可以使用这个参数设置：</p>
+<p>–extract-media=DIR</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../faq/index.html" class="btn btn-neutral float-right" title="常见问题" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../markdown-syntax/markdown-sphinx.html" class="btn btn-neutral float-left" title="使sphinx支持markdown" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, embedfire-野火 www.embedfire.com
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
