@@ -92,6 +92,7 @@ sphinx默认不支持markdown语法，要支持的话请参考本模版的conf.p
 到文档源码所在的makefile目录：
 
 ::
+
     #在文档的makefile目录下执行
 
     #Windows指令

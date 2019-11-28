@@ -58,6 +58,7 @@
    rest-syntax/cross-reference
    rest-syntax/code-highlight
    rest-syntax/pic-video
+   rest-syntax/math
    rest-syntax/admonition
    rest-syntax/directive-role
    rest-syntax/rule
