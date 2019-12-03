@@ -66,8 +66,11 @@
 .. toctree::
    :maxdepth: 1
    :caption: 使用markdown
+   :titlesonly:
+   :numbered:
 
    markdown-syntax/markdown-sphinx
+   markdown-syntax/markdown-demo
 
 .. toctree::
    :maxdepth: 1
