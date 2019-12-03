@@ -23,6 +23,7 @@ https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html
 
 
 安装python3
+^^^^^^^^^^^^^^^^
 
 windows直接到python官网下载安装
 
@@ -32,7 +33,7 @@ Ubuntu下使用如下指令安装：
     sudo apt install python3
 
 安装sphinx
----------------
+^^^^^^^^^^^^^^^^^^
 windows下使用如下指令安装：
 
 ::
@@ -56,9 +57,12 @@ Ubuntu下使用如下指令安装
 使用模板创建sphinx文档
 ----------------------
 
-本文档已适配好支持markdown、默认的readthedoc主题等内容。
+本项目的sphinx已适配好支持markdown、默认的readthedoc主题等内容。
 
 如果是要编写新的书籍，推荐直接使用本项目文档作为模版，修改conf.py文件的配置即可改变项目的名字、主题之类的内容。
+
+下载项目源码
+^^^^^^^^^^^^^^^^^^^
 
 先从github下载本项目源代码：
 
@@ -95,6 +99,9 @@ Ubuntu下使用如下指令安装
 - **base_code** ：目录通常存放项目的代码，
 - **documentation** ：通常存放项目的文档内容，如我们的rst、markdown文档。
 
+安装python依赖包
+^^^^^^^^^^^^^^^^^^^
+
 使用时，要先根据项目的 **documentation/requirements.txt** 安装依赖的python包。
 
 ::
@@ -109,23 +116,15 @@ Ubuntu下使用如下指令安装
     #Ubuntu指令
     python3 -m pip install -r  requirements.txt
 
-
-创建全新的sphinx文档
-----------------------
-若不想使用本工程模版，可以使用如下指令创建全新的文档。
-
-::
-
-    sphinx-quickstart
-
-按照提示回答问题即可。
-推荐使用默认的_build目录，与vscode保持一致。
-其中提示语言时可以使用这个中文代码：zh_CN
-
-sphinx默认不支持markdown语法，要支持的话请参考本模版的conf.py文件配置。
+编写文档
+^^^^^^^^^^^^^^^^^^^^
+安装好后，在项目的文档目录中添加rst或markdown文件即可，
+建议使用vs code来编写文档，它非常方便预览文档，
+可参考《 :doc:`vscode`》来搭建vscode预览sphinx文档的环境。
 
 
-编译
+
+编译文档
 -------------------------
 如果使用了vscode的rst插件，可以直接保存rst文件后它会自动编译并可预览。
 
@@ -145,7 +144,7 @@ sphinx默认不支持markdown语法，要支持的话请参考本模版的conf.p
 
 
 
-使用python服务器预览
+在本地预览文档
 ------------------------------
 vscode插件预览有时不够完整，可以在本地开启一个python服务器来预览。
 进入到生成的_build/html目录，运行如下指令：
@@ -183,3 +182,19 @@ vscode插件预览有时不够完整，可以在本地开启一个python服务�
     make.bat  html
     #Ubuntu指令
     make html
+
+
+
+创建全新的sphinx文档
+----------------------
+若不想使用本工程模版，可以使用如下指令创建全新的文档。
+
+::
+
+    sphinx-quickstart
+
+按照提示回答问题即可。
+推荐使用默认的_build目录，与vscode保持一致。
+其中提示语言时可以使用这个中文代码：zh_CN
+
+sphinx默认不支持markdown语法，要支持的话请参考本模版的conf.py文件配置。
