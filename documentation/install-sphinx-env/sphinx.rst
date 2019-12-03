@@ -122,6 +122,12 @@ Ubuntu下使用如下指令安装
 建议使用vs code来编写文档，它非常方便预览文档，
 可参考《 :doc:`vscode`》来搭建vscode预览sphinx文档的环境。
 
+编写文档时的语法和规范可参考以下内容：
+
+- 《 :doc:`../rest-syntax/base-syntax`》
+- 《 :doc:`../rest-syntax/rule`》
+- 《 :doc:`../markdown-syntax/markdown-demo`》
+
 
 
 编译文档
