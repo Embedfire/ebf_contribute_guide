@@ -53,16 +53,56 @@ Ubuntu下使用如下指令安装
 
 
 
-创建sphinx文档
+使用模板创建sphinx文档
 ----------------------
 
 本文档已适配好支持markdown、默认的readthedoc主题等内容。
-推荐直接使用本文档作为模版，修改conf.py文件的配置即可改变项目的名字、主题之类的内容。
 
-使用时，
-要先根据项目的 **requirements.txt** 安装依赖的python包。
+如果是要编写新的书籍，推荐直接使用本项目文档作为模版，修改conf.py文件的配置即可改变项目的名字、主题之类的内容。
+
+先从github下载本项目源代码：
 
 ::
+
+    git clone git@github.com:Embdefire/ebf_contribute_guide.git
+
+下载完成后，可看到本项目的结构大致如下：
+
+开源项目的整体目录：
+
+::
+
+  ├── README                    说明文档或软链接至documentation中的说明，方便github阅读
+  ├── base_code                 配套代码
+  └── documentation             配套文档
+      ├── faq                   存储常见问题的文档
+      ├── about_us.rst          关于我们
+      ├── _build                文档编译输出目录
+      ├── conf.py               sphinx配置文件
+      ├── contribute            如何参与项目，贡献与投稿的说明
+      ├── foreword.rst          前言
+      ├── index.rst             目录
+      ├── make.bat
+      ├── Makefile
+      ├── media                 文档中使用的图片文件
+      ├── requirements.txt      文档的python依赖
+      ├── _static
+      ├── _templates
+      ├── TODO.rst              待完成的内容，发布的任务列表
+
+特别内容说明如下：
+
+- **base_code** ：目录通常存放项目的代码，
+- **documentation** ：通常存放项目的文档内容，如我们的rst、markdown文档。
+
+使用时，要先根据项目的 **documentation/requirements.txt** 安装依赖的python包。
+
+::
+
+    #切换至requirements.txt文件的同级目录
+    cd documentation
+
+    #requirements.txt文件的同级目录下执行后面的命令
 
     #Windows指令，推荐使用powershell运行
     py -3 -m pip install -r requirements.txt
@@ -87,9 +127,9 @@ sphinx默认不支持markdown语法，要支持的话请参考本模版的conf.p
 
 编译
 -------------------------
-如果使用了vscode的rst插件，可以直接，保存rst文件后它会自动编译并可预览。
+如果使用了vscode的rst插件，可以直接保存rst文件后它会自动编译并可预览。
 
-到文档源码所在的makefile目录：
+也可以手动编译，到文档源码所在的makefile目录，执行如下命令：
 
 ::
 
