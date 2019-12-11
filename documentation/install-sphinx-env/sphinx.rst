@@ -72,8 +72,6 @@ Ubuntu下使用如下指令安装
 
 下载完成后，可看到本项目的结构大致如下：
 
-开源项目的整体目录：
-
 ::
 
   ├── README                    说明文档或软链接至documentation中的说明，方便github阅读
@@ -96,8 +94,8 @@ Ubuntu下使用如下指令安装
 
 特别内容说明如下：
 
-- **base_code** ：目录通常存放项目的代码，
-- **documentation** ：通常存放项目的文档内容，如我们的rst、markdown文档。
+- **base_code** ：该目录通常存放项目的代码，
+- **documentation** ：该目录通常存放项目的文档内容，如我们的rst、markdown文档。
 
 安装python依赖包
 ^^^^^^^^^^^^^^^^^^^

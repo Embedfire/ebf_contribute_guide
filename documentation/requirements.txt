@@ -1,9 +1,9 @@
-#支持markdown的插件
+# markdown suport
 recommonmark
-#支持markdown表格的插件
+# markdown table suport
 sphinx-markdown-tables
 
-#以下是主题，默认使用rtd
+# theme default rtd
 
-#crate-docs-theme
+# crate-docs-theme
 sphinx-rtd-theme
