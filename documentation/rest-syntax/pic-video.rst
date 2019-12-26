@@ -19,8 +19,8 @@
 ::
 
     .. image:: ../media/rest-syntax/pic-video/logo.png
-    :align: center
-    :alt: 野火logo
+       :align: center
+       :alt: 野火logo
 
 效果：
 
@@ -104,12 +104,6 @@
 ::
 
     .. raw:: html
-
-    <iframe height=498 width=510 src='http://player.youku.com/embed/XMzk2MzQxNTQ3Ng==' frameborder=0 'allowfullscreen'></iframe>
-
-效果：
-
-.. raw:: html
 
     <iframe height=498 width=510 src='http://player.youku.com/embed/XMzk2MzQxNTQ3Ng==' frameborder=0 'allowfullscreen'></iframe>
 
