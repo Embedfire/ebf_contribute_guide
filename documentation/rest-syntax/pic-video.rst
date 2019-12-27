@@ -12,8 +12,32 @@
 ----------------------
 图片原文件统一存储在引用文档所在的同级目录的 **media** 文件夹下。
 
-显示图片直接使用image指令，无特殊情况的话我们书籍图片要求使用居中方式显示，
+显示图片直接使用image或figure指令，无特殊情况的话我们书籍图片要求使用居中方式显示，
 还需要添加“alt”选项指定图片的描述（类似doc中的题注），以便图片加载失败时显示文字
+
+
+figure命令
+~~~~~~~~~~~~~~~
+
+语法：
+
+::
+
+    .. figure: ../media/rest-syntax/pic-video/logo.png
+       :alt: 野火logo
+       :align: center
+       :caption: 野火logo
+
+
+效果：
+
+.. figure:: ../media/rest-syntax/pic-video/logo.png
+    :alt: 野火logo
+    :align: center
+
+
+image命令：
+~~~~~~~~~~~~~~~
 
 语法：
 ::
@@ -27,6 +51,8 @@
 .. image:: ../media/rest-syntax/pic-video/logo.png
    :align: center
    :alt: 野火logo
+
+
 
 
 
