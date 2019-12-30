@@ -114,6 +114,13 @@ Ubuntu下使用如下指令安装
     #Ubuntu指令
     python3 -m pip install -r  requirements.txt
 
+    #国内用户推荐使用清华源安装
+    #Windows指令，推荐使用powershell运行
+    py -3 -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+    #Ubuntu指令
+    python3 -m pip install -r  requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
 编写文档
 ^^^^^^^^^^^^^^^^^^^^
 安装好后，在项目的文档目录中添加rst或markdown文件即可，
