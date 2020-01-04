@@ -73,4 +73,113 @@ make html时，编译会有提示输出，尽量让它不输出的warning。
       :language: c
       :linenos:
 
+类似docx的题注引用
+------------------------
+rst可通过链接实现类似doc的题注引用，它通过给内容添加 ``:name:`` 属性来实现，
+代码、图片、表格等都可以使用这种方式，使用 ``:name:`` 属性来定义引用名，通过引用名+下划线来实现引用：
+
+
+
+语法：
+::
+
+   .. literalinclude:: ../../base_code/hello.c
+      :caption: ../../base_code/hello.c
+      :language: c
+      :name: 代码清单或自己起的引用名字
+      :linenos:
+
+   引用的方式是使用 ":name:"定义的名字加下划线 "_",如：
+
+   代码清单或自己起的引用名字_
+
+效果：
+
+.. literalinclude:: ../../base_code/hello.c
+   :caption: ../../base_code/hello.c
+   :language: c
+   :name: 代码清单或自己起的引用名字
+   :linenos:
+
+引用的方式是使用 ":name:"定义的名字加下划线 "_",如：
+
+代码清单或自己起的引用名字_
+
+
+
+
+
+语法：
+::
+
+   .. image:: ../media/rest-syntax/pic-video/logo.png
+      :align: center
+      :name: 野火logo
+
+   引用的方式是使用 ":name:"定义的名字加下划线 "_",如：
+
+   野火logo_
+
+效果：
+
+.. image:: ../media/rest-syntax/pic-video/logo.png
+   :align: center
+   :name: 野火logo
+
+引用的方式是使用 ":name:"定义的名字加下划线 "_",如：
+
+野火logo_
+
+
+语法：
+
+::
+
+    .. list-table:: Frozen Delights!
+        :widths: 15 10 30
+        :header-rows: 1
+        :name: 测试表格
+
+        * - Treat
+          - Quantity
+          - Description
+        * - Albatross
+          - 2.99
+          - On a stick!
+        * - Crunchy Frog
+          - 1.49
+          - If we took the bones out, it wouldn't be
+            crunchy, now would it?
+        * - Gannet Ripple
+          - 1.99
+          - On a stick!
+
+    引用的方式是使用 ":name:"定义的名字加下划线 "_",如：
+
+    测试表格_
+
+
+效果：
+
+.. list-table:: Frozen Delights!
+   :widths: 15 10 30
+   :header-rows: 1
+
+   * - Treat
+     - Quantity
+     - Description
+   * - Albatross
+     - 2.99
+     - On a stick!
+   * - Crunchy Frog
+     - 1.49
+     - If we took the bones out, it wouldn't be
+       crunchy, now would it?
+   * - Gannet Ripple
+     - 1.99
+     - On a stick!
+
+引用的方式是使用 ":name:"定义的名字加下划线 "_",如：
+
+    测试表格_
 
