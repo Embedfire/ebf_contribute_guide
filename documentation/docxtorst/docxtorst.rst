@@ -57,7 +57,7 @@ docx批量转rst方法
 
 2.新建一个文本文档，内容如下，获取当前列表中的文件名
 
-.. code-block::
+.. code-block:: guess
     :caption: bat文件中的内容
     :linenos:
 
@@ -81,7 +81,7 @@ docx批量转rst方法
 
 5.鼠标：alt+鼠标左键选择中所有的行。键盘：alt+shift+方向鍵将位置调整到行首。输入rstfromdocx -lurg 后保存。
 
-.. code-block::
+.. code-block:: guess
     :caption: 输入
     :linenos:
 
@@ -108,7 +108,7 @@ docx批量转rst方法
 
 1.在新文件夹中新建一个.bat文件，并复制以下内容保存后运行
 
-.. code-block::
+.. code-block:: guess
     :caption: bat文件中的内容
     :linenos:
 
