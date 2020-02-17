@@ -25,6 +25,7 @@
 
    install-sphinx-env/sphinx
    install-sphinx-env/vscode
+   docxtorst/docxtorst
 
 .. glob可以自动搜索符合的目标，但不适合顺序编号
 .. 对顺序无要求的目录可以使用这种方式
