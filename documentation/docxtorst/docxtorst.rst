@@ -87,6 +87,10 @@ docx批量转rst方法
 
     rstfromdocx -lurg
 
+.. image:: media/docxto012.png
+   :align: center
+   :alt: 输入
+
 6.在文档所在的文件夹按住shift键和点击鼠标右键，选中打开powershell，
 
 .. image:: media/docxto013.png
