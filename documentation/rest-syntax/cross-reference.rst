@@ -73,7 +73,7 @@
 语法：
 ::
 
-    :ref:`about_embedfire <about_embedfire>`
+    :ref:`自定义链接文字 <about_embedfire>`
 
     :ref:`about_embedfire`
 
@@ -83,7 +83,47 @@
 
 :ref:`about_embedfire`
 
+若要跨文档引用标题，可以使用自动切片扩展插件，它的使用方式如下：
 
+某个文档：
+
+::
+
+    =============
+    Some Document
+    =============
+
+
+    Internal Headline
+    =================
+
+然后在另一个文档引用：
+
+::
+
+    ===============
+    Some Other Doc
+    ===============
+
+
+    A link-  :ref:`Internal Headline`
+
+
+此扩展程序是内置的，因此您只需编辑即可 conf.py
+
+::
+
+    extensions = [
+        .
+        . other
+        . extensions
+        . already
+        . listed
+        .
+        'sphinx.ext.autosectionlabel',
+    ]
+
+您唯一需要注意的是，现在您无法在整个文档集合中复制内部标题。
 
 引用非rst文档
 ^^^^^^^^^^^^^^^^^^^^^^^^

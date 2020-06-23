@@ -49,7 +49,9 @@ Ubuntu下使用如下指令安装
     python3 -m pip install sphinx
     #国内用户推荐使用清华源安装，使用-i指定源
     python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple sphinx
-
+    
+    #Ubuntu下可能还需要安装如下软件包
+    apt-get install python3-sphinx
 
 
 
