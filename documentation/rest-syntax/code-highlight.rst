@@ -125,6 +125,56 @@ C高亮测试
    }
 
 
+verilog高亮测试
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+语法：
+
+使用verilog或v进行高亮
+
+::
+
+   .. code-block:: v
+      :caption: verilog test
+      :emphasize-lines: 4,5
+      :linenos:
+
+      module  key_filter
+      #(
+         parameter CNT_MAX = 20'd999_999 //计数器计数最大值
+      )
+      (
+         input   wire    sys_clk     ,   //系统时钟50Mhz
+         input   wire    sys_rst_n   ,   //全局复位
+         input   wire    key_in      ,   //按键输入信号
+
+         output  reg     key_flag        //key_flag为1时表示消抖后检测到按键被按下
+                                          //key_flag为0时表示没有检测到按键被按下
+      );
+
+效果：
+
+
+.. code-block:: v
+   :caption: verilog test
+   :emphasize-lines: 4,5
+   :linenos:
+
+   module  key_filter
+   #(
+      parameter CNT_MAX = 20'd999_999 //计数器计数最大值
+   )
+   (
+      input   wire    sys_clk     ,   //系统时钟50Mhz
+      input   wire    sys_rst_n   ,   //全局复位
+      input   wire    key_in      ,   //按键输入信号
+
+      output  reg     key_flag        //key_flag为1时表示消抖后检测到按键被按下
+                                       //key_flag为0时表示没有检测到按键被按下
+   );
+
+
 literalinclude直接嵌入本地文件并高亮
 ----------------------------------------------------------------------
 
