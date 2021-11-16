@@ -24,7 +24,7 @@ figure命令
 
 ::
 
-    .. figure: ../media/rest-syntax/pic-video/logo.png
+    .. figure:: ../media/rest-syntax/pic-video/logo.png
        :alt: 野火logo
        :align: center
        :caption: 野火logo
